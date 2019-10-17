@@ -1,5 +1,5 @@
 const gotCitiesCSV ="King's Landing,Braavos, Volantis,Old Valyria,Free Cities,Qarth,Meereen";
-const lotrCitiesArray = ["Mordor","Gondor","Rohan","Belriand","Mirkwood","Dead Marshes", "Rhum", "Hard"];
+const lotrCitiesArray = ["Mordor","Gondor","Rohan","Belriand","Mirkwood","Dead Marshes", "Rhun", "Harad"];
 const bestThing = "The best thing about a boolean is even if you are wrong you are only off by a bit";
 
 function displayResults(functionName, input){
@@ -27,13 +27,13 @@ katas2()
 function katas3(){
     let CSVarray = gotCitiesCSV.split(',')
     displayResults ('Katas3', JSON.stringify(CSVarray.join('; ')));
-    return CSVarray
+    return gotCitiesCSV
 
 }
 katas3()
 
 function katas4(){
-    displayResults('katas4',JSON.stringify(lotrCitiesArray.toString('')));
+    displayResults('Katas4',JSON.stringify(lotrCitiesArray.toString()));
 return lotrCitiesArray
 
 }
@@ -58,21 +58,21 @@ function katas7(){
 katas7()
 
 function katas8(){
-    let result = lotrCitiesArray.splice(2,1);
+     lotrCitiesArray.splice(2,1);
     displayResults('Katas8' ,JSON.stringify(lotrCitiesArray));
     return lotrCitiesArray
 }
 katas8()
 
 function katas9(){
-   let result = lotrCitiesArray.splice(5,2)
+    lotrCitiesArray.splice(5,2)
     displayResults('Katas9' ,JSON.stringify(lotrCitiesArray));
     return lotrCitiesArray
 }
 katas9()
 
 function katas10(){
-    let result =  lotrCitiesArray.splice(2,0, 'Rohan')
+    lotrCitiesArray.splice(2,0, 'Rohan')
     displayResults('Kata10' ,JSON.stringify(lotrCitiesArray));
     return lotrCitiesArray 
 }
@@ -88,7 +88,7 @@ katas11()
 
 function katas12(){
     displayResults('Katas12' ,JSON.stringify(bestThing.slice(0,14)));
-    return lotrCitiesArray
+    return bestThing
 }
 katas12()
 
@@ -114,7 +114,7 @@ function katas15(){
 katas15()
 
 function katas16(){
-displayResults('Katas16' ,JSON.stringify(bestThing.substring(23,38)));
+    displayResults('Katas16' ,JSON.stringify(bestThing.substring(23,38)));
     return bestThing 
 }
 katas16()
@@ -147,8 +147,14 @@ function katas19(){
 }
 katas19()
 
+function find(arr,query){
+    return arr.filter(function(el){
+        return el.toLowerCase().indexOf(query.toLowerCase()) !== -1
+        
+    })
+}
 function katas20(){
-    let solution = find (lotrCitiesArray, "or")
+    let solution = find(lotrCitiesArray, "or")
     displayResults ('Katas20' ,JSON.stringify(solution));
     return lotrCitiesArray
 
