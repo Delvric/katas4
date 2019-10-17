@@ -257,3 +257,7 @@ function katas32(){
     displayResults(('katas32'), JSON.stringify(lotrCitiesArray))
 }
 katas32()
+
+
+
+// finishined
