@@ -235,7 +235,7 @@ katas28()
 
 function katas29(){
     lotrCitiesArray.pop()
-    displayResults ('katas29' ,JSON.stringify(lotrCitiesArray.pop()))
+    displayResults ('katas29' ,JSON.stringify(lotrCitiesArray))
 
 }
 katas29()
